@@ -17,17 +17,16 @@ export class createImages1602709016967 implements MigrationInterface {
             {
                 name: 'path',
                 type: 'varchar',
-
             },
             {
-                name: 'orphanages_id',
+                name: 'orphanage_id',
                 type: 'integer',
             }
             ],
             foreignKeys: [
                 {
                     name: 'ImageOrphanage',
-                    columnNames: ['orphanages_id'],
+                    columnNames: ['orphanage_id'],
                     referencedTableName: 'orphanages',
                     referencedColumnNames: ['id'],
                     onUpdate: 'CASCADE',

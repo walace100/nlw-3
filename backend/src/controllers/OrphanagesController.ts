@@ -13,7 +13,7 @@ export default {
             relations: ['images']
         });
 
-        return response.json(orphanageView.renderMany(orphanages)); 
+        return response.json(orphanageView.renderMany(orphanages));
     },
 
     async show(request: Request, response: Response) {
@@ -25,14 +25,14 @@ export default {
             relations: ['images']
         });
 
-        return response.json(orphanageView.render(orphanage)); 
+        return response.json(orphanageView.render(orphanage));
     },
 
     async create(request: Request, response: Response) {
         const {
             name,
             latitude,
-            logitude,
+            longitude,
             about,
             instructions,
             opening_hours,
@@ -50,18 +50,18 @@ export default {
         const data = {
             name,
             latitude,
-            logitude,
+            longitude,
             about,
             instructions,
             opening_hours,
-            open_on_weekends,
+            open_on_weekends: open_on_weekends === 'true',
             images
         }
 
         const schema = Yup.object().shape({
             name: Yup.string().required(),
             latitude: Yup.number().required(),
-            logitude: Yup.number().required(),
+            longitude: Yup.number().required(),
             about: Yup.string().required().max(300),
             instructions: Yup.string().required(),
             opening_hours: Yup.string().required(),

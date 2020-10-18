@@ -9,9 +9,9 @@ export default {
             latitude: orphanage.latitude,
             longitude: orphanage.longitude,
             about: orphanage.about,
-            instruction: orphanage.instructions,
+            instructions: orphanage.instructions,
             opening_hours: orphanage.opening_hours,
-            open_on_week: orphanage.open_on_weekends,
+            open_on_weekends: orphanage.open_on_weekends,
             images: ImagesView.renderMany(orphanage.images)
         }
     },
