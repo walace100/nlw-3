@@ -1,5 +1,6 @@
 # nlw-3
-semana do next level week	semana do next level week
+semana do next level week
+
 
 ## Requisitos
 
@@ -9,6 +10,12 @@ semana do next level week	semana do next level week
 
 `npm install` ou `yarn install` 
 
-## Iniciação
+## Iniciação do Front-end
 
+abra a pasta `web` e use o comando:
 `npm start` ou `yarn start`
+
+## Iniciação do Back-end
+
+abra a pasta `backend` e use o comando:
+`npm dev` ou `yarn dev`
